@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <!-- https://facebook.github.io/react/ -->
+        <!-- https://facebook.github.io/react/docs/react-without-jsx.html -->
+        <title>Collaboard - My Board</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            
+        <!-- Minified jQuery -->
+        <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+        
+        <!-- Import Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        <!-- Minified React -->
+        <script src="https://unpkg.com/react@15/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="remarkable.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-auth.js"></script>
+    </head>
+    
+    <body>
+        <div id='header'>
+            <span class='app_name'>Collaboard</span>
+            <div id='header_actions'>
+                <a href='#' onclick='handlePhotos()'><img src='images/google-photos.png' /></a>
+                <a href='#' onclick='handleGit()'><img src='images/git.png' /></a>
+                <a href='#' onclick='handleShareLink()' id='action_share_link'><img src='images/link.png'/></a>
+            </div>
+        </div>
+        
+        <div id='root'></div>
+        
+        <h1>Notes</h1>
+        <div id='notes'></div>
+        
+        <h1>To-Do Items</h1>
+        <div id='todo'></div>
+        
+        <h1>Bookmarks</h1>
+        <div id='bookmarks'></div>
+        
+        <div id='markdown'></div>
+        
+    </body>
+    
+    <footer>
+        <script src="firebase_core.js"></script>
+        <script src="dom_core.js"></script>
+        <script src="board_core.js"></script>
+        <script>
+            window.onload = function() {
+                domStart();
+                init();
+                connectToFirebase();
+            };
+        </script>
+        <link rel="stylesheet" href="custom.css">
+    </footer>
+</html>

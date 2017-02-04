@@ -1,0 +1,69 @@
+body {
+    background-color: #efefef;   
+    padding: 8px;
+    margin-top:64px;
+}
+
+#header {
+    display:block;
+    width:100vw;
+    background-color:#dedede;
+    box-shadow: black 0px -3px 18px 0px;
+    height:64px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding-left: 64px;
+    border-bottom: solid 1px #888;
+}
+
+.app_name {
+/*    font-stretch: condensed;   */
+    font-variant: small-caps;
+    display:inline-block;
+    position: fixed;
+    top: 20px;
+}
+
+#header_actions {
+    text-align: right;
+    display: inline-block;
+    position: fixed;
+    right: 96px;
+    top: 10px;
+}
+
+#header_actions img {
+    height:36px;   
+}
+
+#header_actions a {
+    margin-right:12px;
+}
+
+#root {
+    display:none;   
+}
+
+.check-hidden {
+    color: gray;
+    text-decoration: line-through;
+}
+
+li.todolist, li.noteslist {
+    list-style: none;   
+}
+
+li.todolist input {
+    margin-right: 8px;   
+}
+
+.delete-item {
+    display:inline-block;
+    margin-left:64px;
+}
+
+.md_in {
+    width:60%;
+    height:300px;
+}
